@@ -2,7 +2,17 @@ import tkinter as tk
 import tkinter.messagebox
 
 def open_results():
-    tkinter.messagebox.showinfo('Summary', 'test')
+    radio_result = state_of_radio.get()
+    scale_result = scaler.get()
+    degree_result = cb_var_1.get()
+    robot_result = cb_var_2.get()
+    spin_result = spin.get()
+    message = f'''
+    Radio: {radio_result}\nScale:{scale_result}\n
+    I have degree: {degree_result}\nI\'m not a robot: {robot_result}
+    Education: {spin_result}
+    '''
+    tkinter.messagebox.showinfo('Summary', message)
 
 window = tk.Tk()
 
